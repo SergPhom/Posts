@@ -12,7 +12,7 @@ class WallServiceTest {
 
         WallService.add(post)
 
-        assertEquals(1, WallService.userPosts.last().id)
+        assertNotEquals(0, WallService.userPosts.last().id)
     }
 
     @Test
