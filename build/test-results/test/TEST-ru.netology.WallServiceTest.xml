@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="ru.netology.WallServiceTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2021-05-19T17:11:34" hostname="COMPUTER" time="0.071">
+<testsuite name="ru.netology.WallServiceTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-05-19T19:49:39" hostname="COMPUTER" time="0.043">
   <properties/>
-  <testcase name="updateFalse" classname="ru.netology.WallServiceTest" time="0.07"/>
-  <testcase name="updateTrue" classname="ru.netology.WallServiceTest" time="0.0"/>
-  <testcase name="addPostIdNotZero" classname="ru.netology.WallServiceTest" time="0.0"/>
+  <testcase name="addPostIdNotZero" classname="ru.netology.WallServiceTest" time="0.043"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
