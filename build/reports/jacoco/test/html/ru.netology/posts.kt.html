@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="ru"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>posts.kt</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Posts</a> &gt; <a href="index.source.html" class="el_package">ru.netology</a> &gt; <span class="el_source">posts.kt</span></div><h1>posts.kt</h1><pre class="source lang-java linenums">package ru.netology
+
+object Comments{                  //object	РёРЅС„РѕСЂРјР°С†РёСЏ Рѕ РєРѕРјРјРµРЅС‚Р°СЂРёСЏС… Рє Р·Р°РїРёСЃРё, РѕР±СЉРµРєС‚ СЃ РїРѕР»СЏРјРё:
+<span class="nc" id="L4">    val count: Int = 0                //(integer) вЂ” РєРѕР»РёС‡РµСЃС‚РІРѕ РєРѕРјРјРµРЅС‚Р°СЂРёРµРІ;</span>
+<span class="nc" id="L5">    val canPost: Boolean = false         //* (integer, [0,1]) вЂ” РёРЅС„РѕСЂРјР°С†РёСЏ Рѕ С‚РѕРј, РјРѕР¶РµС‚ Р»Рё С‚РµРєСѓС‰РёР№ РїРѕР»СЊР·РѕРІР°С‚РµР»СЊ РєРѕРјРјРµРЅС‚РёСЂРѕРІР°С‚СЊ Р·Р°РїРёСЃСЊ (1 вЂ” РјРѕР¶РµС‚, 0 вЂ” РЅРµ РјРѕР¶РµС‚);</span>
+<span class="nc" id="L6">    val groupsCanPost: Boolean = false  //(integer, [0,1]) вЂ” РёРЅС„РѕСЂРјР°С†РёСЏ Рѕ С‚РѕРј, РјРѕРіСѓС‚ Р»Рё СЃРѕРѕР±С‰РµСЃС‚РІР° РєРѕРјРјРµРЅС‚РёСЂРѕРІР°С‚СЊ Р·Р°РїРёСЃСЊ;</span>
+<span class="nc" id="L7">    val canClose: Boolean = false        // вЂ” РјРѕР¶РµС‚ Р»Рё С‚РµРєСѓС‰РёР№ РїРѕР»СЊР·РѕРІР°С‚РµР»СЊ Р·Р°РєСЂС‹С‚СЊ РєРѕРјРјРµРЅС‚Р°СЂРёРё Рє Р·Р°РїРёСЃРё;</span>
+<span class="nc" id="L8">    val canOpen: Boolean = false         // вЂ” РјРѕР¶РµС‚ Р»Рё С‚РµРєСѓС‰РёР№ РїРѕР»СЊР·РѕРІР°С‚РµР»СЊ РѕС‚РєСЂС‹С‚СЊ РєРѕРјРјРµРЅС‚Р°СЂРёРё Рє Р·Р°РїРёСЃРё.</span>
+}
+object Copyrights{                 //object	РёСЃС‚РѕС‡РЅРёРє РјР°С‚РµСЂРёР°Р»Р°, РѕР±СЉРµРєС‚ СЃ РїРѕР»СЏРјРё:
+<span class="nc" id="L11">    val id: Int = 0</span>
+<span class="pc" id="L12">    val link: String = &quot;&quot;</span>
+<span class="pc" id="L13">    val name: String = &quot;&quot;</span>
+<span class="pc" id="L14">    val type: String = &quot;&quot;</span>
+}
+object Likes {                      //object	РёРЅС„РѕСЂРјР°С†РёСЏ Рѕ Р»Р°Р№РєР°С… Рє Р·Р°РїРёСЃРё, РѕР±СЉРµРєС‚ СЃ РїРѕР»СЏРјРё:
+<span class="nc" id="L17">    val count: Int = 0                  // (integer) вЂ” С‡РёСЃР»Рѕ РїРѕР»СЊР·РѕРІР°С‚РµР»РµР№, РєРѕС‚РѕСЂС‹Рј РїРѕРЅСЂР°РІРёР»Р°СЃСЊ Р·Р°РїРёСЃСЊ;</span>
+<span class="nc" id="L18">    val userLikes: Int  = 0             //* (integer, [0,1]) вЂ” РЅР°Р»РёС‡РёРµ РѕС‚РјРµС‚РєРё В«РњРЅРµ РЅСЂР°РІРёС‚СЃСЏВ» РѕС‚ С‚РµРєСѓС‰РµРіРѕ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ (1 вЂ” РµСЃС‚СЊ, 0 вЂ” РЅРµС‚);</span>
+<span class="nc" id="L19">    val canLike: Boolean = false           //* (integer, [0,1]) вЂ” РёРЅС„РѕСЂРјР°С†РёСЏ Рѕ С‚РѕРј, РјРѕР¶РµС‚ Р»Рё С‚РµРєСѓС‰РёР№ РїРѕР»СЊР·РѕРІР°С‚РµР»СЊ РїРѕСЃС‚Р°РІРёС‚СЊ РѕС‚РјРµС‚РєСѓ В«РњРЅРµ РЅСЂР°РІРёС‚СЃСЏВ» (1 вЂ” РјРѕР¶РµС‚, 0 вЂ” РЅРµ РјРѕР¶РµС‚);can_publish* (integer, [0,1]) вЂ” РёРЅС„РѕСЂРјР°С†РёСЏ Рѕ С‚РѕРј, РјРѕР¶РµС‚ Р»Рё С‚РµРєСѓС‰РёР№ РїРѕР»СЊР·РѕРІР°С‚РµР»СЊ СЃРґРµР»Р°С‚СЊ СЂРµРїРѕСЃС‚ Р·Р°РїРёСЃРё (1 вЂ” РјРѕР¶РµС‚, 0 вЂ” РЅРµ РјРѕР¶РµС‚).</span>
+}
+object Reposts {                     //object	РёРЅС„РѕСЂРјР°С†РёСЏ Рѕ СЂРµРїРѕСЃС‚Р°С… Р·Р°РїРёСЃРё (В«Р Р°СЃСЃРєР°Р·Р°С‚СЊ РґСЂСѓР·СЊСЏРјВ»), РѕР±СЉРµРєС‚ СЃ РїРѕР»СЏРјРё:
+<span class="nc" id="L22">    val count: Int = 0                   // (integer) вЂ” С‡РёСЃР»Рѕ РїРѕР»СЊР·РѕРІР°С‚РµР»РµР№, СЃРєРѕРїРёСЂРѕРІР°РІС€РёС… Р·Р°РїРёСЃСЊ;</span>
+<span class="nc" id="L23">    val userReposted: Boolean = false        //* (integer, [0,1]) вЂ” РЅР°Р»РёС‡РёРµ СЂРµРїРѕСЃС‚Р° РѕС‚ С‚РµРєСѓС‰РµРіРѕ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ (1 вЂ” РµСЃС‚СЊ, 0 вЂ” РЅРµС‚).</span>
+}
+object Views {                         //object	РёРЅС„РѕСЂРјР°С†РёСЏ Рѕ РїСЂРѕСЃРјРѕС‚СЂР°С… Р·Р°РїРёСЃРё. РћР±СЉРµРєС‚ СЃ РµРґРёРЅСЃС‚РІРµРЅРЅС‹Рј РїРѕР»РµРј:
+<span class="nc" id="L26">    val count: Int = 0                   // (integer) вЂ” С‡РёСЃР»Рѕ РїСЂРѕСЃРјРѕС‚СЂРѕРІ Р·Р°РїРёСЃРё.</span>
+}
+object Donuts {                         //object	РёРЅС„РѕСЂРјР°С†РёСЏ Рѕ Р·Р°РїРёСЃРё VK Donut:
+<span class="nc" id="L29">    val isDonut: Boolean = false              //вЂ” Р·Р°РїРёСЃСЊ РґРѕСЃС‚СѓРїРЅР° С‚РѕР»СЊРєРѕ РїР»Р°С‚РЅС‹Рј РїРѕРґРїРёСЃС‡РёРєР°Рј VK Donut;</span>
+<span class="nc" id="L30">    val paidDuration: Int = 0             //(integer) вЂ” РІСЂРµРјСЏ, РІ С‚РµС‡РµРЅРёРµ РєРѕС‚РѕСЂРѕРіРѕ Р·Р°РїРёСЃСЊ Р±СѓРґРµС‚ РґРѕСЃС‚СѓРїРЅР° С‚РѕР»СЊРєРѕ РїР»Р°С‚РЅС‹Рј РїРѕРґРїРёСЃС‡РёРєР°Рј VK Donut;</span>
+<span class="pc" id="L31">    val placeholder = Placeholder.text</span>
+<span class="nc" id="L32">    val canPublishFreeCopy:Boolean = false   // вЂ” РјРѕР¶РЅРѕ Р»Рё РѕС‚РєСЂС‹С‚СЊ Р·Р°РїРёСЃСЊ РґР»СЏ РІСЃРµС… РїРѕР»СЊР·РѕРІР°С‚РµР»РµР№, Р° РЅРµ С‚РѕР»СЊРєРѕ РїРѕРґРїРёСЃС‡РёРєРѕРІ VK Donut;</span>
+<span class="pc" id="L33">    val editMode = EditModes.all</span>
+}
+object EditModes{                        // вЂ” РёРЅС„РѕСЂРјР°С†РёСЏ Рѕ С‚РѕРј, РєР°РєРёРµ Р·РЅР°С‡РµРЅРёСЏ VK Donut РјРѕР¶РЅРѕ РёР·РјРµРЅРёС‚СЊ РІ Р·Р°РїРёСЃРё. Р’РѕР·РјРѕР¶РЅС‹Рµ Р·РЅР°С‡РµРЅРёСЏ:
+<span class="fc" id="L36">    val all = &quot;all&quot;                    // all вЂ” РІСЃСЋ РёРЅС„РѕСЂРјР°С†РёСЋ Рѕ VK Donut.</span>
+<span class="pc" id="L37">    val duration = &quot;duration&quot;         // duration вЂ” РІСЂРµРјСЏ, РІ С‚РµС‡РµРЅРёРµ РєРѕС‚РѕСЂРѕРіРѕ Р·Р°РїРёСЃСЊ Р±СѓРґРµС‚ РґРѕСЃС‚СѓРїРЅР° С‚РѕР»СЊРєРѕ РїР»Р°С‚РЅС‹Рј РїРѕРґРїРёСЃС‡РёРєР°Рј VK Donut.</span>
+}
+object Placeholder{                   //(object) вЂ” Р·Р°РіР»СѓС€РєР° РґР»СЏ РїРѕР»СЊР·РѕРІР°С‚РµР»РµР№, РєРѕС‚РѕСЂС‹Рµ РЅРµ РѕС„РѕСЂРјРёР»Рё РїРѕРґРїРёСЃРєСѓ VK Donut. РћС‚РѕР±СЂР°Р¶Р°РµС‚СЃСЏ РІРјРµСЃС‚Рѕ СЃРѕРґРµСЂР¶РёРјРѕРіРѕ Р·Р°РїРёСЃРё.
+<span class="fc" id="L40">    val text = &quot;No VK donut&quot;</span>
+}
+
+<span class="pc bpc" id="L43" title="23 of 48 branches missed.">data class  Post (</span>
+<span class="fc" id="L44">    val id: Int = 0,</span>
+<span class="pc" id="L45">    val ownerId: Int = 0,</span>
+<span class="pc" id="L46">    val fromId: Int = 0,</span>
+<span class="pc" id="L47">    val createdBy: Int = 0,</span>
+<span class="pc" id="L48">    val date: Int = 0,                 //integer	РІСЂРµРјСЏ РїСѓР±Р»РёРєР°С†РёРё Р·Р°РїРёСЃРё РІ С„РѕСЂРјР°С‚Рµ unixtime.</span>
+<span class="pc" id="L49">    val text: String = &quot;&quot;,                //string	С‚РµРєСЃС‚ Р·Р°РїРёСЃРё.</span>
+<span class="pc" id="L50">    val replyOwnerId: Int = 0,          //integer	РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РІР»Р°РґРµР»СЊС†Р° Р·Р°РїРёСЃРё, РІ РѕС‚РІРµС‚ РЅР° РєРѕС‚РѕСЂСѓСЋ Р±С‹Р»Р° РѕСЃС‚Р°РІР»РµРЅР° С‚РµРєСѓС‰Р°СЏ.</span>
+<span class="pc" id="L51">    val replyPostId: Int = 0,          //integer	РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ Р·Р°РїРёСЃРё, РІ РѕС‚РІРµС‚ РЅР° РєРѕС‚РѕСЂСѓСЋ Р±С‹Р»Р° РѕСЃС‚Р°РІР»РµРЅР° С‚РµРєСѓС‰Р°СЏ.</span>
+<span class="pc" id="L52">    val friendsOnly: Boolean = false,         //integer, [1]	1, РµСЃР»Рё Р·Р°РїРёСЃСЊ Р±С‹Р»Р° СЃРѕР·РґР°РЅР° СЃ РѕРїС†РёРµР№ В«РўРѕР»СЊРєРѕ РґР»СЏ РґСЂСѓР·РµР№В».</span>
+<span class="pc" id="L53">    val postType: String = &quot;&quot;,                 //string    С‚РёРї Р·Р°РїРёСЃРё, РјРѕР¶РµС‚ РїСЂРёРЅРёРјР°С‚СЊ СЃР»РµРґСѓСЋС‰РёРµ Р·РЅР°С‡РµРЅРёСЏ: post, copy, reply, postpone, suggest.</span>
+<span class="pc" id="L54">    val signerId: Int = 0,                    //integer	РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ Р°РІС‚РѕСЂР°, РµСЃР»Рё Р·Р°РїРёСЃСЊ Р±С‹Р»Р° РѕРїСѓР±Р»РёРєРѕРІР°РЅР° РѕС‚ РёРјРµРЅРё СЃРѕРѕР±С‰РµСЃС‚РІР° Рё РїРѕРґРїРёСЃР°РЅР° РїРѕР»СЊР·РѕРІР°С‚РµР»РµРј;</span>
+<span class="pc" id="L55">    val canPin: Boolean = false,                  //integer, [0,1]	РёРЅС„РѕСЂРјР°С†РёСЏ Рѕ С‚РѕРј, РјРѕР¶РµС‚ Р»Рё С‚РµРєСѓС‰РёР№ РїРѕР»СЊР·РѕРІР°С‚РµР»СЊ Р·Р°РєСЂРµРїРёС‚СЊ Р·Р°РїРёСЃСЊ (1 вЂ” РјРѕР¶РµС‚, 0 вЂ” РЅРµ РјРѕР¶РµС‚).</span>
+<span class="pc" id="L56">    val canDelete: Boolean = false,               //integer, [0,1]	РёРЅС„РѕСЂРјР°С†РёСЏ Рѕ С‚РѕРј, РјРѕР¶РµС‚ Р»Рё С‚РµРєСѓС‰РёР№ РїРѕР»СЊР·РѕРІР°С‚РµР»СЊ СѓРґР°Р»РёС‚СЊ Р·Р°РїРёСЃСЊ (1 вЂ” РјРѕР¶РµС‚, 0 вЂ” РЅРµ РјРѕР¶РµС‚).</span>
+<span class="pc" id="L57">    val canEdit: Boolean = false,                 //integer, [0,1]	РёРЅС„РѕСЂРјР°С†РёСЏ Рѕ С‚РѕРј, РјРѕР¶РµС‚ Р»Рё С‚РµРєСѓС‰РёР№ РїРѕР»СЊР·РѕРІР°С‚РµР»СЊ СЂРµРґР°РєС‚РёСЂРѕРІР°С‚СЊ Р·Р°РїРёСЃСЊ (1 вЂ” РјРѕР¶РµС‚, 0 вЂ” РЅРµ РјРѕР¶РµС‚).</span>
+<span class="pc" id="L58">    val isPinned: Boolean = false,                //integer, [1]	РёРЅС„РѕСЂРјР°С†РёСЏ Рѕ С‚РѕРј, С‡С‚Рѕ Р·Р°РїРёСЃСЊ Р·Р°РєСЂРµРїР»РµРЅР°.</span>
+<span class="pc" id="L59">    val markedAsAds: Boolean = false,            //integer, [0,1]	РёРЅС„РѕСЂРјР°С†РёСЏ Рѕ С‚РѕРј, СЃРѕРґРµСЂР¶РёС‚ Р»Рё Р·Р°РїРёСЃСЊ РѕС‚РјРµС‚РєСѓ &quot;СЂРµРєР»Р°РјР°&quot; (1 вЂ” РґР°, 0 вЂ” РЅРµС‚).</span>
+<span class="pc" id="L60">    val isFavorite: Boolean = false,              //boolean	true, РµСЃР»Рё РѕР±СЉРµРєС‚ РґРѕР±Р°РІР»РµРЅ РІ Р·Р°РєР»Р°РґРєРё Сѓ С‚РµРєСѓС‰РµРіРѕ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ.</span>
+<span class="pc" id="L61">    val postponedId: Int = 0,                   // integer</span>
+<span class="pc" id="L62">    val comments: Comments = Comments,</span>
+<span class="pc" id="L63">    val copyrights: Copyrights = Copyrights,</span>
+<span class="pc" id="L64">    val likes: Likes = Likes,</span>
+<span class="pc" id="L65">    val reports: Reposts = Reposts,</span>
+<span class="pc" id="L66">    val views: Views = Views,</span>
+<span class="pc" id="L67">    val donut: Donuts = Donuts</span>
+){
+    override fun toString(): String {
+<span class="nc" id="L70">        return id.toString()</span>
+    }
+<span class="fc" id="L72">}</span>
+
+object WallService{
+<span class="pc" id="L75">    var userPosts: ArrayList&lt;Post&gt; = arrayListOf()</span>
+    fun add(post: Post): Post {
+<span class="fc" id="L77">        val newPost =</span>
+<span class="fc bfc" id="L78" title="All 2 branches covered.">        if(userPosts.isEmpty())  post.copy(id = 1)</span>
+<span class="fc" id="L79">        else post.copy(id = userPosts.last().id + 1)</span>
+<span class="fc" id="L80">        userPosts += newPost</span>
+<span class="fc" id="L81">        return  userPosts.last()</span>
+    }
+    fun update(post: Post): Boolean {
+<span class="fc bfc" id="L84" title="All 2 branches covered.">        for(oldPost in userPosts){</span>
+<span class="pc bpc" id="L85" title="1 of 2 branches missed.">            if(post.id == oldPost.id){</span>
+<span class="nc" id="L86">                val updapedPost = oldPost.copy(id = oldPost.id,</span>
+<span class="nc" id="L87">                    oldPost.ownerId,</span>
+<span class="nc" id="L88">                    oldPost.fromId +1,</span>
+<span class="nc" id="L89">                    oldPost.createdBy +1,</span>
+<span class="nc" id="L90">                    oldPost.date,</span>
+<span class="nc" id="L91">                    oldPost.text + 1,</span>
+<span class="nc" id="L92">                    oldPost.replyOwnerId + 1,</span>
+<span class="nc" id="L93">                    oldPost.replyPostId + 1,</span>
+<span class="nc bnc" id="L94" title="All 2 branches missed.">                    oldPost.friendsOnly.not(),</span>
+<span class="nc" id="L95">                    oldPost.postType + 1,</span>
+<span class="nc" id="L96">                    oldPost.signerId +1,</span>
+<span class="nc bnc" id="L97" title="All 2 branches missed.">                    canPin  = oldPost.canPin.not(),</span>
+<span class="nc bnc" id="L98" title="All 2 branches missed.">                    oldPost.canDelete.not(),</span>
+<span class="nc bnc" id="L99" title="All 2 branches missed.">                    oldPost.canEdit.not(),</span>
+<span class="nc bnc" id="L100" title="All 2 branches missed.">                    oldPost.isPinned.not(),</span>
+<span class="nc bnc" id="L101" title="All 2 branches missed.">                    oldPost.markedAsAds.not(),</span>
+<span class="nc bnc" id="L102" title="All 2 branches missed.">                    oldPost.isFavorite.not(),</span>
+<span class="nc" id="L103">                    oldPost.postponedId + 1</span>
+                )
+<span class="nc" id="L105">                userPosts[userPosts.indexOf(oldPost)] = updapedPost</span>
+<span class="nc" id="L106">                return true</span>
+            }
+        }
+<span class="fc" id="L109">        return false</span>
+    }
+
+    override fun toString(): String {
+<span class="nc" id="L113">        return userPosts.toList().toString()</span>
+    }
+}
+
+fun main() {
+<span class="nc" id="L118">    println(WallService.add(Post()))</span>
+<span class="nc" id="L119">    println(WallService.add(Post()))</span>
+<span class="nc" id="L120">    println(WallService.add(Post()))</span>
+<span class="nc" id="L121">    println(WallService.add(Post()))</span>
+<span class="nc" id="L122">    println(WallService.userPosts[1].postType)</span>
+<span class="nc" id="L123">    println(WallService.update(Post(2)))</span>
+<span class="nc" id="L124">    println(WallService.userPosts[1].postType)</span>
+<span class="nc" id="L125">    println(WallService.userPosts)</span>
+<span class="nc" id="L126">}</span>
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.6.202009150832</span></div></body></html>
