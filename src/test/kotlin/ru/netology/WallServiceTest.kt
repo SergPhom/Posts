@@ -8,7 +8,7 @@ class WallServiceTest {
 
     @Test
     fun addPostIdNotZero() {
-        val post = Post(0)
+        val post = Post()
 
         WallService.add(post)
 

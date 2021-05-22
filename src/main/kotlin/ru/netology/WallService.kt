@@ -3,10 +3,10 @@ package ru.netology
 object WallService{
     val userPosts: ArrayList<Post> = arrayListOf()
     fun add(post: Post): Post {
-        val newPost =
+        val post =
         if(userPosts.isEmpty())  post.copy(id = 1)
         else post.copy(id = userPosts.last().id + 1)
-        userPosts += newPost
+        userPosts += post
         return  userPosts.last()
     }
     fun update(post: Post): Boolean {

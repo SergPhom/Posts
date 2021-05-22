@@ -3,7 +3,7 @@ package ru.netology
 import java.util.*
 
 data class  Post (
-    val id: Int = 0,
+    var id: Int = 0,
     val ownerId: Int = 0,
     val fromId: Int = 0,
     val createdBy: Int = 0,
@@ -30,7 +30,9 @@ data class  Post (
     //nullable
     val geo: Geo? = null,
     val postSource: PostSource? = null,
-    val copyHistory: Array<Post>? =null
+    val copyHistory: Array<Post>? = null,
+    //add attachments
+    val attachments: Array<Attachment>? = null
 ){
     override fun toString(): String {
         return "id = $id, geo = $geo, postSource = $postSource, copyHistory = ${copyHistory?.toList()}."
