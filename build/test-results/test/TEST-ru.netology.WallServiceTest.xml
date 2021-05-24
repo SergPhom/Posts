@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="ru.netology.WallServiceTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2021-05-24T19:47:18" hostname="COMPUTER" time="0.097">
+<testsuite name="ru.netology.WallServiceTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2021-05-24T19:57:06" hostname="COMPUTER" time="0.077">
   <properties/>
-  <testcase name="shouldThrowCommentNotFoundException" classname="ru.netology.WallServiceTest" time="0.012"/>
-  <testcase name="reportCommentCorrectWork" classname="ru.netology.WallServiceTest" time="0.07"/>
+  <testcase name="shouldThrowCommentNotFoundException" classname="ru.netology.WallServiceTest" time="0.01"/>
+  <testcase name="reportCommentCorrectWork" classname="ru.netology.WallServiceTest" time="0.057"/>
   <testcase name="updateFalse" classname="ru.netology.WallServiceTest" time="0.0"/>
   <testcase name="shouldThrowPostNotFoundException" classname="ru.netology.WallServiceTest" time="0.001"/>
-  <testcase name="updateTrue" classname="ru.netology.WallServiceTest" time="0.012"/>
+  <testcase name="updateTrue" classname="ru.netology.WallServiceTest" time="0.008"/>
   <testcase name="shouldThrowIndexOutOfBoundsException" classname="ru.netology.WallServiceTest" time="0.0"/>
-  <testcase name="addPostIdNotZero" classname="ru.netology.WallServiceTest" time="0.0"/>
-  <testcase name="createCommentAddCommentToArray" classname="ru.netology.WallServiceTest" time="0.001"/>
+  <testcase name="addPostIdNotZero" classname="ru.netology.WallServiceTest" time="0.001"/>
+  <testcase name="createCommentAddCommentToArray" classname="ru.netology.WallServiceTest" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
