@@ -1,13 +1,42 @@
 package ru.netology
 
 object WallService{
-    val userPosts: ArrayList<Post> = arrayListOf()
+    val userPosts = arrayListOf<Post>()
+    private val comments = arrayListOf<Comment>()
+    private val reports = arrayListOf<Report>()
+    fun getComments(): ArrayList<Comment>{
+        return comments
+    }
     fun add(post: Post): Post {
-        val post =
+        val newPost =
         if(userPosts.isEmpty())  post.copy(id = 1)
         else post.copy(id = userPosts.last().id + 1)
-        userPosts += post
+        userPosts += newPost
         return  userPosts.last()
+    }
+
+
+    fun createComment(comment: Comment): Boolean{
+        for((index, oldPost) in userPosts.withIndex()) {
+            if (comment.postId == oldPost.id) {
+                comments += if(comments.isEmpty()) comment.copy(id = 1)
+                else comment.copy(id = comments.last().id + 1)
+                return true
+            }
+        }
+        throw PostNotFoundException
+    }
+    fun reportComment(report: Report): Boolean{
+        for((index, comment) in comments.withIndex()) {
+            if (report.commentId == comment.id) {
+                reports += report
+                if(report.reason < 0 || report.reason > 8){
+                    throw IndexOutOfBoundsException("Reason with such Index doesn't exist")
+                }
+                return true
+            }
+        }
+        throw CommentNotFoundException
     }
     fun update(post: Post): Boolean {
         for((index, oldPost) in userPosts.withIndex()){
@@ -51,3 +80,7 @@ object WallService{
         }
     }
 }
+
+object CommentNotFoundException : NoSuchElementException ("Comment with such ID doesn't exist")
+
+object PostNotFoundException : NoSuchElementException("Post with such ID doesn't exist")

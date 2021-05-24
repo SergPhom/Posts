@@ -36,4 +36,40 @@ class WallServiceTest {
         assertFalse(result)
     }
 
+    @Test
+    fun createCommentAddCommentToArray() {
+        WallService.add(Post())
+
+        val result = WallService.createComment(Comment(postId = 1))
+
+        assertTrue(result)
+    }
+
+    @Test(expected = PostNotFoundException::class)
+    fun shouldThrowPostNotFoundException() {
+        WallService.createComment(Comment(postId = 100))
+    }
+
+    @Test
+    fun reportCommentCorrectWork() {
+        WallService.add(Post())           // create Post
+        WallService.createComment(Comment(postId = WallService.userPosts.last().id)) //create Comment to Post
+
+        val result = WallService.reportComment(Report(commentId = WallService.getComments().last().id))
+
+        assertTrue(result)
+    }
+
+    @Test(expected = CommentNotFoundException::class)
+    fun shouldThrowCommentNotFoundException() {
+        WallService.reportComment(Report(commentId = 100))
+    }
+
+    @Test(expected = IndexOutOfBoundsException::class)
+    fun shouldThrowIndexOutOfBoundsException() {
+        WallService.add(Post())           // create Post
+        WallService.createComment(Comment(postId = WallService.userPosts.last().id)) //create Comment to Post
+        WallService.reportComment(Report(commentId = WallService.getComments().last().id, reason = 10))
+    }
+
 }

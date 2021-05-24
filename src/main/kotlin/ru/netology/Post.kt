@@ -140,6 +140,7 @@ data class Reposts (                     //object	информация о реп
 data class Views (                         //object	информация о просмотрах записи. Объект с единственным полем:
     val count: Int = 0                   // (integer) — число просмотров записи.
 )
+//Nullable
 //donut with it's members
 data class Donuts(                         //object	информация о записи VK Donut:
     val isDonut: Boolean = false,              //— запись доступна только платным подписчикам VK Donut;

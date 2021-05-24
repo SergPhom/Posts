@@ -11,6 +11,9 @@ fun main() {
         VideoAttachment(Video()),
         DocAttachment(Doc(0,0,"",0,"","",0,0,null))
     ))
-    println(new.attachments?.toList()?.toString())
+    val photo = (new.attachments?.get(0) as PhotoAttachment).photo
+    val photos = new.attachments.filterIsInstance<PhotoAttachment>()
+    println(photos[0].photo)
+    println(photo.toString())
     WallService.print(WallService.userPosts)
 }
